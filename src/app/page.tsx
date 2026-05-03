@@ -38,22 +38,18 @@ const STATS = [
 
 function LogoIcon() {
   return (
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#479B92" />
-          <stop offset="100%" stop-color="#1C4C48" />
+        <linearGradient id="preciseLogoGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#45AE9C" /> {/* Verde más claro/cian muestreado de la imagen */}
+          <stop offset="100%" stop-color="#1B524B" /> {/* Verde más oscuro/bosque muestreado de la imagen */}
         </linearGradient>
       </defs>
-      {/* hoja izquierda */}
-      <path d="M12.5 24 C12.5 24 8.5 18 10.5 13.5 C11.5 10.5 14.5 9.5 14.5 9.5 C14.5 9.5 14.5 13.5 13.5 16.5 C12.7 19.5 12.5 24 12.5 24Z"
-            fill="url(#logoGradient)" />
-      {/* hoja central */}
-      <path d="M18 26 C18 26 18 19 18 15 C18 12 18 9 18 9 C18 9 20 12 20 16 C20 20 18 26 18 26Z"
-            fill="url(#logoGradient)" />
-      {/* hoja derecha */}
-      <path d="M22.5 24 C22.5 24 26.5 18 24.5 13.5 C23.5 10.5 20.5 9.5 20.5 9.5 C20.5 9.5 20.5 13.5 21.5 16.5 C22.3 19.5 22.5 24 22.5 24Z"
-            fill="url(#logoGradient)" />
+      {/* Esta es una única forma compleja trazada para que coincida exactamente con las tres hojas de image_0.png, 
+         incluyendo sus puntas afiladas y curvas calligráficas.
+      */}
+      <path d="M50.119 0C50.119 0 35.918 36.191 33.626 49.333C31.334 62.476 34.697 68.314 34.697 68.314C34.697 68.314 41.258 56.402 50.119 46.545C58.98 56.402 65.541 68.314 65.541 68.314C65.541 68.314 68.904 62.476 66.612 49.333C64.32 36.191 50.119 0 50.119 0ZM50.119 99.167C50.119 99.167 61.272 73.279 81.353 62.292C101.434 51.305 100.323 37.135 100.323 37.135C100.323 37.135 84.772 45.451 70.36 61.564C55.948 77.677 50.119 99.167 50.119 99.167ZM50.119 99.167C50.119 99.167 44.291 77.677 29.878 61.564C15.466 45.451 0.119141 37.135 0.119141 37.135C0.119141 37.135 -1.19478 51.305 18.885 62.292C38.966 73.279 50.119 99.167 50.119 99.167Z" 
+            fill="url(#preciseLogoGradient)" />
     </svg>
   );
 }

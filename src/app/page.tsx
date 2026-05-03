@@ -126,7 +126,7 @@ export default function LandingPage() {
 
           {/* Links desktop */}
           <div className="nav-links">
-            {['Especialidades', 'Nosotros', 'Contacto'].map(link => (
+            {['Especialidades', 'Nosotros', 'Contactanos'].map(link => (
               <a key={link}
                 href={'#' + link.toLowerCase()}
                 style={{
@@ -177,7 +177,7 @@ export default function LandingPage() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="mobile-menu">
-            {['Especialidades', 'Nosotros', 'Contacto'].map(link => (
+            {['Especialidades', 'Nosotros', 'Contactanos'].map(link => (
               <a key={link} href={'#' + link.toLowerCase()}
                 onClick={() => setMenuOpen(false)}
                 style={{ fontSize: 15, color: '#2D3748', textDecoration: 'none', fontWeight: 500 }}>
@@ -189,14 +189,14 @@ export default function LandingPage() {
               borderRadius: 8, border: '1.5px solid #0D2335',
               color: '#0D2335', textDecoration: 'none', textAlign: 'center',
             }}>
-              Sign in
+              Iniciar sesión
             </a>
             <a href="/registro" style={{
               fontSize: 14, fontWeight: 600, padding: '10px',
               borderRadius: 8, background: '#4A857A',
               color: 'white', textDecoration: 'none', textAlign: 'center',
             }}>
-              Book appointment
+              Agendar cita
             </a>
           </div>
         )}
@@ -270,7 +270,7 @@ export default function LandingPage() {
               }}
                 onMouseEnter={e => (e.currentTarget.style.background = '#3a6b61')}
                 onMouseLeave={e => (e.currentTarget.style.background = '#4A857A')}>
-                Book appointment →
+                Agendar cita →
               </a>
               <a href="#specialties" style={{
                 padding: '14px 32px', borderRadius: 12,
@@ -280,7 +280,7 @@ export default function LandingPage() {
               }}
                 onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.08)')}
                 onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
-                View specialties
+                Ver especialidades 
               </a>
             </div>
           </div>
@@ -315,11 +315,11 @@ export default function LandingPage() {
             <p style={{
               fontSize: 11, fontWeight: 700, letterSpacing: 3,
               textTransform: 'uppercase', color: '#4A857A', marginBottom: 12,
-            }}>What we offer</p>
+            }}>Lo que ofrecemos</p>
             <h2 style={{
               fontFamily: 'Fraunces, serif', fontSize: 38,
               fontWeight: 300, color: '#0D2335',
-            }}>Our specialties</h2>
+            }}>Nuestras especialidades</h2>
           </div>
 
           <div className="esp-grid" style={{ display: 'grid', gap: 20 }}>
@@ -353,7 +353,7 @@ export default function LandingPage() {
                   color: '#2D3748', marginBottom: 16,
                 }}>{esp.desc}</p>
                 <span style={{ fontSize: 13, fontWeight: 600, color: '#4A857A' }}>
-                  Book now →
+                  Agendar →
                 </span>
               </div>
             ))}

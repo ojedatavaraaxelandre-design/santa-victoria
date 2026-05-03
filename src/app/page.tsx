@@ -39,18 +39,23 @@ const STATS = [
 function LogoIcon() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="36" height="36" rx="9" fill="#0D2335"/>
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#479B92" />
+          <stop offset="100%" stop-color="#1C4C48" />
+        </linearGradient>
+      </defs>
       {/* hoja izquierda */}
-      <path d="M13 26 C13 26 9 20 11 15 C12 12 15 11 15 11 C15 11 15 15 14 18 C13.2 21 13 26 13 26Z"
-            fill="#4A857A"/>
-      {/* hoja derecha */}
-      <path d="M23 26 C23 26 27 20 25 15 C24 12 21 11 21 11 C21 11 21 15 22 18 C22.8 21 23 26 23 26Z"
-            fill="#4A857A"/>
-      {/* hoja centro */}
+      <path d="M12.5 24 C12.5 24 8.5 18 10.5 13.5 C11.5 10.5 14.5 9.5 14.5 9.5 C14.5 9.5 14.5 13.5 13.5 16.5 C12.7 19.5 12.5 24 12.5 24Z"
+            fill="url(#logoGradient)" />
+      {/* hoja central */}
       <path d="M18 26 C18 26 18 19 18 15 C18 12 18 9 18 9 C18 9 20 12 20 16 C20 20 18 26 18 26Z"
-            fill="#6aada1"/>
+            fill="url(#logoGradient)" />
+      {/* hoja derecha */}
+      <path d="M22.5 24 C22.5 24 26.5 18 24.5 13.5 C23.5 10.5 20.5 9.5 20.5 9.5 C20.5 9.5 20.5 13.5 21.5 16.5 C22.3 19.5 22.5 24 22.5 24Z"
+            fill="url(#logoGradient)" />
     </svg>
-  )
+  );
 }
 
 export default function LandingPage() {
@@ -126,7 +131,7 @@ export default function LandingPage() {
 
           {/* Links desktop */}
           <div className="nav-links">
-            {['Especialidades', 'Nosotros', 'Contactanos'].map(link => (
+            {['Especialidades', 'Nosotros', 'Contáctanos'].map(link => (
               <a key={link}
                 href={'#' + link.toLowerCase()}
                 style={{
@@ -177,7 +182,7 @@ export default function LandingPage() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="mobile-menu">
-            {['Especialidades', 'Nosotros', 'Contactanos'].map(link => (
+            {['Especialidades', 'Nosotros', 'Contáctanos'].map(link => (
               <a key={link} href={'#' + link.toLowerCase()}
                 onClick={() => setMenuOpen(false)}
                 style={{ fontSize: 15, color: '#2D3748', textDecoration: 'none', fontWeight: 500 }}>

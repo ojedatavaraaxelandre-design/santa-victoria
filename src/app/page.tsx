@@ -30,10 +30,10 @@ const ESPECIALIDADES = [
 ]
 
 const STATS = [
-  { val: '+3.000', label: 'Patients treated' },
-  { val: '5',      label: 'Specialties' },
-  { val: '99%',    label: 'Satisfaction' },
-  { val: '< 24h',  label: 'Lab results' },
+  { val: '+3.000', label: 'Pacientes atendidos' },
+  { val: '5',      label: 'Especialidades' },
+  { val: '99%',    label: 'Satisfacción' },
+  { val: '< 24h',  label: 'Resultados lab.' },
 ]
 
 function LogoIcon() {
@@ -149,7 +149,7 @@ export default function LandingPage() {
             }}
               onMouseEnter={e => { e.currentTarget.style.background = '#0D2335'; e.currentTarget.style.color = '#fff' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#0D2335' }}>
-              Sign in
+              Iniciar sesión
             </a>
             <a href="/registro" style={{
               fontSize: 13, fontWeight: 600, padding: '8px 18px',
@@ -158,7 +158,7 @@ export default function LandingPage() {
             }}
               onMouseEnter={e => (e.currentTarget.style.background = '#3a6b61')}
               onMouseLeave={e => (e.currentTarget.style.background = '#4A857A')}>
-              Book appointment
+              Agendar cita
             </a>
           </div>
 
@@ -409,7 +409,7 @@ export default function LandingPage() {
             Santa Victoria Medical Center
           </div>
           <div style={{ fontSize: 12, color: '#4A857A' }}>
-            © {new Date().getFullYear()} · All rights reserved
+            © {new Date().getFullYear()} · Todos los derechos reservados
           </div>
           <div style={{ display: 'flex', gap: 20 }}>
             {['Privacy', 'Terms', 'Contact'].map(l => (
